@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cp-con | Simple Text Convert</title>
+    <link rel="stylesheet" href="/dist/index.css" />
+  </head>
+  <body class="h-full bg-slate-50">
+    <header>
+      <h1 class="w-full py-5 text-center text-xl shadow-lg">cp-con</h1>
+      <!-- Toast -->
+      <div
+        id="toast"
+        class="mx-auto my-4 w-fit rounded-md bg-slate-300 px-4 py-2 text-center lowercase opacity-0 transition-opacity"
+      >
+        copied
+      </div>
+    </header>
+    <!-- Main window -->
+    <main class="mx-5 my-auto rounded-lg pb-10 sm:mx-auto sm:max-w-2xl">
+      <!-- Input Bar -->
+      <div
+        class="mx-autow-full grid grid-cols-2 grid-rows-2 gap-4 px-4 py-5 drop-shadow-lg"
+      >
+        <!-- Text input -->
+        <input
+          type="text"
+          name="text-input"
+          id="text-input"
+          autofocus
+          placeholder="insert copied text here"
+          class="col-span-2 inline-block w-full rounded-md p-3 focus:outline focus:outline-blue-300"
+        />
+        <!-- Clear Button -->
+        <button onclick="clearInput()" class="btn bg-red-300">Clear</button>
+        <!-- Copy Button -->
+        <button onclick="copyText()" class="btn bg-blue-300">Copy</button>
+      </div>
+
+      <!-- Text Convertion Options -->
+      <div class="grid grid-cols-1 gap-4 px-4 xsm:grid-cols-2">
+        <button
+          onclick="convertUppercase()"
+          id="uppercase"
+          class="btn convert-btn"
+        >
+          UPPERCASE
+        </button>
+        <button
+          onclick="convertLowercase()"
+          id="lowercase"
+          class="btn convert-btn"
+        >
+          lowercase
+        </button>
+        <button
+          onclick="convertSentence()"
+          id="sentence-case"
+          class="btn convert-btn"
+        >
+          Sentence. Case.
+        </button>
+        <button
+          onclick="alternatingCase()"
+          id="alternating-case"
+          class="btn convert-btn"
+        >
+          AlTeRnAtInG cAsE
+        </button>
+        <button
+          onclick="convertKebab()"
+          id="kebab-case"
+          class="btn convert-btn"
+        >
+          kebab-case
+        </button>
+        <button
+          onclick="convertCamel()"
+          id="camel-case"
+          class="btn convert-btn"
+        >
+          camelCase
+        </button>
+        <button
+          onclick="convertPascal()"
+          id="pascal-case"
+          class="btn convert-btn"
+        >
+          PascalCase
+        </button>
+      </div>
+    </main>
+
+    <script src="/src/js/index.js"></script>
+  </body>
+</html>
